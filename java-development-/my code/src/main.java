@@ -66,3 +66,7 @@ class Animal{
             System.out.println("Animal is eating");
         }
     }
+
+
+    //abtraction -> hiding the complex implementation details and showing only the essential features of the object
+    //abstract class = a class that cannot be instantiated, but can be subclassed
