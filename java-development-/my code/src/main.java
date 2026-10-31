@@ -43,14 +43,26 @@ public class main {
        //  parent class = the class being inherited from (superclass)
        //child class <- parent class
 
-       Dog dog1=new Dog();
-       Cat cat1=new Cat();
-       dog1.speak();
-       cat1.speak();
-       dog1.eat();
-       cat1.eat();
-       
+    //    Dog dog1=new Dog();
+    //    Cat cat1=new Cat();
+    //    dog1.speak();
+    //    cat1.speak();
+    //    dog1.eat();
+    //    cat1.eat();
 
+
+
+       //  ----------------------------------------------------------------------------------------------//
+       
+       Person person1=new Person("ashish","kumar");
+       person1.showname();
+
+       student student1=new student("anuj","singh",20,3.5);
+       student1.showGPA();
+  //-----------------------------------------------------------------------------------------//
+
+       Car car1=new Car("BMW","Black","X5","2020");
+       System.out.println(car1);
     }
 
     
@@ -66,7 +78,46 @@ class Animal{
             System.out.println("Animal is eating");
         }
     }
+     
+    //super  is a keyword that refers to the superclass (parent) of an object
+    //used in constructors and methods to access attributes and methods of the parent class
+
+    class  Person{
+         String Fname;
+         String Lname;
+
+         Person(String Fname,String Lname){
+            this.Fname=Fname;
+            this.Lname=Lname;
+         }
+         void showname(){
+            System.out.println("First name is " +Fname + " Last name is " +Lname);
+         }
+
+    }
 
 
-    //abtraction -> hiding the complex implementation details and showing only the essential features of the object
-    //abstract class = a class that cannot be instantiated, but can be subclassed
+
+    //toString() = special method that all objects inherit, used to return a string that "textually represents" an object
+    //can be used both implicitly and explicitly
+    //by default, the toString() method returns the name of the class and a hashcode of the object
+
+     class Car{
+        String make;
+        String color;
+        String model;
+        String year;
+
+        Car(String make,String color,String model,String year){
+            this.make=make;
+            this.color=color;
+            this.model=model;
+            this.year=year;
+        }
+
+        @Override
+        public String toString(){
+            return "Car make is " +make + " color is " +color + " model is " +model + " year is " +year;
+        }
+
+    }
