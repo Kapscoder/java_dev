@@ -102,22 +102,32 @@ class Animal{
     //can be used both implicitly and explicitly
     //by default, the toString() method returns the name of the class and a hashcode of the object
 
-     class Car{
-        String make;
-        String color;
-        String model;
-        String year;
+    //  class Car{
+    //     String make;
+    //     String color;
+    //     String model;
+    //     String year;
 
-        Car(String make,String color,String model,String year){
-            this.make=make;
-            this.color=color;
-            this.model=model;
-            this.year=year;
-        }
+    //     Car(String make,String color,String model,String year){
+    //         this.make=make;
+    //         this.color=color;
+    //         this.model=model;
+    //         this.year=year;
+    //     }
 
-        @Override
-        public String toString(){
-            return "Car make is " +make + " color is " +color + " model is " +model + " year is " +year;
-        }
+    //     @Override
+    //     public String toString(){
+    //         return "Car make is " +make + " color is " +color + " model is " +model + " year is " +year;
+    //     }
 
-    }
+    // }
+
+
+//------------------------------------------------------------------------------------------//
+    //abtract - used to define abstract classes and methods
+   //abtraction -is the process of hinding the implementation details and showing only essential features of the object
+   //Abstract class = a class that cannot be instantiated, may contain abstract methods (methods without a body)
+   // can contain both abstract and concrete methods (methods with a body)
+
+   Circle circle1=new Circle();
+   Triangle triangle1=new Triangle();
