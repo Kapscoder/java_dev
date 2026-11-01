@@ -54,47 +54,54 @@ public class main {
 
        //  ----------------------------------------------------------------------------------------------//
        
-       Person person1=new Person("ashish","kumar");
-       person1.showname();
+    //    Person person1=new Person("ashish","kumar");
+    //    person1.showname();
 
-       student student1=new student("anuj","singh",20,3.5);
-       student1.showGPA();
+    //    student student1=new student("anuj","singh",20,3.5);
+    //    student1.showGPA();
   //-----------------------------------------------------------------------------------------//
 
-       Car car1=new Car("BMW","Black","X5","2020");
-       System.out.println(car1);
+    //    Car car1=new Car("BMW","Black","X5","2020");
+    //    System.out.println(car1);
+
+
+    //-----------------------------------------------------------------------------------------//
+    Circle circle1=new Circle(3);
+    Triangle triangle1=new Triangle(4, 5);
+    System.out.println("Area of Circle: " + circle1.area());
+    System.out.println("Area of Triangle: " + triangle1.area());
     }
 
     
 
 }
-class Animal{
-        boolean isAlive;
+// class Animal{
+//         boolean isAlive;
 
-        Animal(){
-            isAlive=true;
-        } 
-        void eat(){
-            System.out.println("Animal is eating");
-        }
-    }
+//         Animal(){
+//             isAlive=true;
+//         } 
+//         void eat(){
+//             System.out.println("Animal is eating");
+//         }
+//     }
      
     //super  is a keyword that refers to the superclass (parent) of an object
     //used in constructors and methods to access attributes and methods of the parent class
 
-    class  Person{
-         String Fname;
-         String Lname;
+    // class  Person{
+    //      String Fname;
+    //      String Lname;
 
-         Person(String Fname,String Lname){
-            this.Fname=Fname;
-            this.Lname=Lname;
-         }
-         void showname(){
-            System.out.println("First name is " +Fname + " Last name is " +Lname);
-         }
+    //      Person(String Fname,String Lname){
+    //         this.Fname=Fname;
+    //         this.Lname=Lname;
+    //      }
+    //      void showname(){
+    //         System.out.println("First name is " +Fname + " Last name is " +Lname);
+    //      }
 
-    }
+    // }
 
 
 
@@ -129,5 +136,5 @@ class Animal{
    //Abstract class = a class that cannot be instantiated, may contain abstract methods (methods without a body)
    // can contain both abstract and concrete methods (methods with a body)
 
-   Circle circle1=new Circle();
-   Triangle triangle1=new Triangle();
+//    Circle circle1=new Circle(3);
+//    Triangle triangle1=new Triangle(4, 5);
