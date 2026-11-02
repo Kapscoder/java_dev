@@ -138,3 +138,10 @@ public class main {
 
 //    Circle circle1=new Circle(3);
 //    Triangle triangle1=new Triangle(4, 5);
+
+
+
+
+//-----------------------------------------------------------------------------------------
+
+//Encapsulation - wrapping data (variables) and code (methods) together into a single unit 
