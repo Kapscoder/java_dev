@@ -66,12 +66,30 @@ public class main {
 
 
     //-----------------------------------------------------------------------------------------//
-    Circle circle1=new Circle(3);
-    Triangle triangle1=new Triangle(4, 5);
-    System.out.println("Area of Circle: " + circle1.area());
-    System.out.println("Area of Triangle: " + triangle1.area());
+    // Circle circle1=new Circle(3);
+    // Triangle triangle1=new Triangle(4, 5);
+    // System.out.println("Area of Circle: " + circle1.area());
+    // System.out.println("Area of Triangle: " + triangle1.area());
+
+
+
+    //----------------------------------------------------------------------
+     BankAccount account = new BankAccount();
+
+        account.setAccountHolder("Kapil");
+        account.deposit(5000);
+
+        System.out.println(account.getAccountHolder());
+        System.out.println(account.getBalance());
+
+
+
     }
 
+
+
+    //------------------------------------------------------------------------------------
+     
     
 
 }
@@ -145,3 +163,31 @@ public class main {
 //-----------------------------------------------------------------------------------------
 
 //Encapsulation - wrapping data (variables) and code (methods) together into a single unit 
+class BankAccount {
+
+    // Private variables (data hiding)
+    private String accountHolder;
+    private double balance;
+
+    // Setter method
+    public void setAccountHolder(String name) {
+        accountHolder = name;
+    }
+
+    // Getter method
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
+    // Deposit method
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance = balance + amount;
+        }
+    }
+
+    // Getter for balance
+    public double getBalance() {
+        return balance;
+    }
+}
