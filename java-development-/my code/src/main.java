@@ -72,10 +72,22 @@ public class main {
     // System.out.println("Area of Triangle: " + triangle1.area());
 
 
+    //-----------------------------------------------------------------------------------------//
+    // Polymorphism = one method name with different behavior depending on the object
+    // A parent class reference can point to a child object.
+    Animal animal1 = new Dog();
+    Animal animal2 = new Cat();
+
+    animal1.speak();
+    animal2.speak();
+
+    // Output:
+    // dog is barking
+    // cat is meowing
+
 
     //----------------------------------------------------------------------
      BankAccount account = new BankAccount();
-
         account.setAccountHolder("Kapil");
         account.deposit(5000);
 
@@ -161,6 +173,12 @@ public class main {
 
 
 //-----------------------------------------------------------------------------------------
+
+class Animal {
+    void speak() {
+        System.out.println("Animal is making a sound");
+    }
+}
 
 //Encapsulation - wrapping data (variables) and code (methods) together into a single unit 
 class BankAccount {
