@@ -75,28 +75,30 @@ public class main {
     //-----------------------------------------------------------------------------------------//
     // Polymorphism = one method name with different behavior depending on the object
     // A parent class reference can point to a child object.
-    Animal animal1 = new Dog();
-    Animal animal2 = new Cat();
-
-    animal1.speak();
-    animal2.speak();
-
+    // Example:
+    // Animal animal1 = new Dog();
+    // Animal animal2 = new Cat();
+    // animal1.speak();
+    // animal2.speak();
     // Output:
     // dog is barking
     // cat is meowing
 
-
     //----------------------------------------------------------------------
-     BankAccount account = new BankAccount();
-        account.setAccountHolder("Kapil");
-        account.deposit(5000);
+    BankAccount account = new BankAccount();
+    account.setAccountHolder("Kapil");
+    account.setBalance(2500);
+    account.deposit(5000);
 
-        System.out.println(account.getAccountHolder());
-        System.out.println(account.getBalance());
+    System.out.println(account.getAccountHolder());
+    System.out.println(account.getBalance());
 
 
 
     }
+
+
+    
 
 
 
@@ -187,14 +189,26 @@ class BankAccount {
     private String accountHolder;
     private double balance;
 
-    // Setter method
+    // Setter method for account holder
     public void setAccountHolder(String name) {
         accountHolder = name;
     }
 
-    // Getter method
+    // Getter method for account holder
     public String getAccountHolder() {
         return accountHolder;
+    }
+
+    // Setter method for balance
+    public void setBalance(double balance) {
+        if (balance >= 0) {
+            this.balance = balance;
+        }
+    }
+
+    // Getter method for balance
+    public double getBalance() {
+        return balance;
     }
 
     // Deposit method
@@ -202,10 +216,5 @@ class BankAccount {
         if (amount > 0) {
             balance = balance + amount;
         }
-    }
-
-    // Getter for balance
-    public double getBalance() {
-        return balance;
     }
 }
