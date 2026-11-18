@@ -85,6 +85,16 @@ public class main {
     // cat is meowing
 
     //----------------------------------------------------------------------
+    // Aggregation: a Library contains Book objects, but each Book can exist
+    // independently of the Library.
+    Book book1 = new Book("Java Basics");
+    Book book2 = new Book("Object-Oriented Programming");
+    Book[] books = {book1, book2};
+
+    Library library = new Library("City Library", books);
+    library.displayBooks();
+
+    //----------------------------------------------------------------------
     BankAccount account = new BankAccount();
     account.setAccountHolder("Kapil");
     account.setBalance(2500);
@@ -175,10 +185,40 @@ public class main {
 
 
 //-----------------------------------------------------------------------------------------
-
+//Aggregation - a special form of association that represents an ownership relationship between two classes
 class Animal {
     void speak() {
         System.out.println("Animal is making a sound");
+    }
+}
+
+// Aggregation example: Library "has" Book objects.
+class Book {
+    private final String title;
+
+    Book(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+class Library {
+    private final String name;
+    private final Book[] books;
+
+    Library(String name, Book[] books) {
+        this.name = name;
+        this.books = books;
+    }
+
+    void displayBooks() {
+        System.out.println(name + " books:");
+        for (Book book : books) {
+            System.out.println("- " + book.getTitle());
+        }
     }
 }
 
