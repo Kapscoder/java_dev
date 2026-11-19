@@ -95,6 +95,12 @@ public class main {
     library.displayBooks();
 
     //----------------------------------------------------------------------
+    // Composition: a House creates and contains Rooms. The Rooms are parts of
+    // the House and cannot exist independently in this example.
+    House house = new House("Green Villa");
+    house.showRooms();
+
+    //----------------------------------------------------------------------
     BankAccount account = new BankAccount();
     account.setAccountHolder("Kapil");
     account.setBalance(2500);
@@ -218,6 +224,40 @@ class Library {
         System.out.println(name + " books:");
         for (Book book : books) {
             System.out.println("- " + book.getTitle());
+        }
+    }
+}
+
+// Composition example: Rooms are created and owned by the House.
+class Room {
+    private final String name;
+
+    Room(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class House {
+    private final String name;
+    private final Room[] rooms;
+
+    House(String name) {
+        this.name = name;
+        this.rooms = new Room[] {
+            new Room("Living Room"),
+            new Room("Bedroom"),
+            new Room("Kitchen")
+        };
+    }
+
+    void showRooms() {
+        System.out.println(name + " rooms:");
+        for (Room room : rooms) {
+            System.out.println("- " + room.getName());
         }
     }
 }
