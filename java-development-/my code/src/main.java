@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class main {
 
     public static void main(String[] args){
@@ -71,6 +73,21 @@ public class main {
     // System.out.println("Area of Circle: " + circle1.area());
     // System.out.println("Area of Triangle: " + triangle1.area());
 
+
+    //-----------------------------------------------------------------------------------------//
+    // ArrayList example: ArrayList is a resizable collection of objects.
+    ArrayList<String> fruits = new ArrayList<>();
+    fruits.add("Apple");
+    fruits.add("Banana");
+    fruits.add("Orange");
+
+    fruits.set(1, "Mango");
+    fruits.remove("Orange");
+
+    System.out.println("Fruits:");
+    for (String fruit : fruits) {
+        System.out.println("- " + fruit);
+    }
 
     //-----------------------------------------------------------------------------------------//
     // Polymorphism = one method name with different behavior depending on the object
