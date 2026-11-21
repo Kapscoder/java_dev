@@ -126,7 +126,16 @@ public class main {
     System.out.println(account.getAccountHolder());
     System.out.println(account.getBalance());
 
-
+    //-----------------------------------------------------------------------------------------//
+    // Exception handling: try to execute code that might fail, catch the exception,
+    // and continue running the program.
+    try {
+        int[] numbers = {10, 20, 30};
+        System.out.println(numbers[5]);
+    } catch (ArrayIndexOutOfBoundsException exception) {
+        System.out.println("Exception example: Invalid array index.");
+        System.out.println("Message: " + exception.getMessage());
+    }
 
     }
 
