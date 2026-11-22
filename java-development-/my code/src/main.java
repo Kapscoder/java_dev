@@ -137,6 +137,33 @@ public class main {
         System.out.println("Message: " + exception.getMessage());
     }
 
+    // Try dividing by zero to demonstrate an ArithmeticException.
+    try {
+        int result = 10 / 0;
+        System.out.println(result);
+    } catch (ArithmeticException exception) {
+        System.out.println("Cannot divide by zero.");
+    }
+
+    // Try to convert text into a number.
+    try {
+        String text = "abc";
+        int number = Integer.parseInt(text);
+        System.out.println("Converted number: " + number);
+    } catch (NumberFormatException exception) {
+        System.out.println("Could not convert \"" + "abc" + "\" to an integer.");
+    }
+
+    // finally runs whether the try block succeeds or throws an exception.
+    try {
+        int value = 100 / 5;
+        System.out.println("Division result: " + value);
+    } catch (ArithmeticException exception) {
+        System.out.println("Division failed.");
+    } finally {
+        System.out.println("The try/catch example is finished.");
+    }
+
     }
 
 
