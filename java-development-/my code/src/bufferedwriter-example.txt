@@ -1,0 +1,2 @@
+Hello from BufferedWriter!
+BufferedWriter writes text efficiently.

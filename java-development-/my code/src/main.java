@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class main {
 
@@ -162,6 +165,27 @@ public class main {
         System.out.println("Division failed.");
     } finally {
         System.out.println("The try/catch example is finished.");
+    }
+
+    //-----------------------------------------------------------------------------------------//
+    // FileWriter example: write text directly to a file.
+    try (FileWriter fileWriter = new FileWriter("filewriter-example.txt")) {
+        fileWriter.write("Hello from FileWriter!\n");
+        fileWriter.write("This text is written directly to the file.");
+        System.out.println("FileWriter wrote the file successfully.");
+    } catch (IOException exception) {
+        System.out.println("Could not write with FileWriter.");
+    }
+
+    // BufferedWriter example: write text efficiently using a buffer.
+    try (BufferedWriter bufferedWriter =
+                 new BufferedWriter(new FileWriter("bufferedwriter-example.txt"))) {
+        bufferedWriter.write("Hello from BufferedWriter!");
+        bufferedWriter.newLine();
+        bufferedWriter.write("BufferedWriter writes text efficiently.");
+        System.out.println("BufferedWriter wrote the file successfully.");
+    } catch (IOException exception) {
+        System.out.println("Could not write with BufferedWriter.");
     }
 
     }
