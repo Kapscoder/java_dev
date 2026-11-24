@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -186,6 +189,31 @@ public class main {
         System.out.println("BufferedWriter wrote the file successfully.");
     } catch (IOException exception) {
         System.out.println("Could not write with BufferedWriter.");
+    }
+
+    // BufferedReader example: read text line by line efficiently using a buffer.
+    try (BufferedReader bufferedReader =
+                 new BufferedReader(new FileReader("bufferedwriter-example.txt"))) {
+        System.out.println("\n--- BufferedReader Example ---");
+        String line;
+        while ((line = bufferedReader.readLine()) != null) {
+            System.out.println(line);
+        }
+    } catch (IOException exception) {
+        System.out.println("Could not read with BufferedReader: " + exception.getMessage());
+    }
+
+    // FileInputStream example: read raw byte stream from a file.
+    try (FileInputStream fileInputStream =
+                 new FileInputStream("filewriter-example.txt")) {
+        System.out.println("\n--- FileInputStream Example (reading byte-by-byte) ---");
+        int byteData;
+        while ((byteData = fileInputStream.read()) != -1) {
+            System.out.print((char) byteData);
+        }
+        System.out.println();
+    } catch (IOException exception) {
+        System.out.println("Could not read with FileInputStream: " + exception.getMessage());
     }
 
     }
